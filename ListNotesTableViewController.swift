@@ -2,52 +2,49 @@
 //  ListNotesTableViewController.swift
 //  onbaording
 //
-//  Created by Emmanuel Idehen on 5/23/18.
-//  Copyright © Emmanuel Idehen. All rights reserved.
+//  Created by Emmanuel Idehen on 3/15/19.
+//  Copyright © 2019 Marquavious Draggon. All rights reserved.
 //
 
 import UIKit
 
-class ListNotesTableViewController: UITableViewController {
+class ListNotesTableViewController: UIViewController {
     
-   var notes = [Note] ()
     
-   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return notes.count
-   }
-    
+   
 
-    // 2
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // 3
-        let cell = tableView.dequeueReusableCell(withIdentifier: "listNotesTableViewCell", for: indexPath)
-        
-        // 4
-        cell.textLabel?.text = "Yay - it's working!"
-        
-        // 5
-        return cell
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let identifier = segue.identifier {
-            if identifier == "displayNote" {
-                print("Table view cell tapped")
-            } else if identifier == "addNote" {
-                print("+ button tapped")
-            }
-        }
-    }
-    
-       @IBAction func unwindToListNotesViewController(_ segue: UIStoryboardSegue) {
-    
-            // for now, simply defining the method is sufficient.
-            // we'll add code later
-    
-        }
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+       
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // 1
+        return 10
+        
+        
         
     }
     
-}
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "listNotesTableViewCell", for: indexPath) as! ListNotesTableViewCell
+        cell.noteTitleLabel.text = "note's title"
+        cell.noteModificationTimeLabel.text = "note's modification time"
+        
+        return cell
+    }
+   
+    /*
+    // MARK: - Navigation
 
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
