@@ -3,7 +3,7 @@
 //  onbaording
 //
 //  Created by Emmanuel Idehen on 3/15/19.
-//  Copyright © 2019 Marquavious Draggon. All rights reserved.
+//
 //
 
 import UIKit
@@ -14,11 +14,16 @@ class ListNotesTableViewController: UIViewController {
    
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-       
+        
+          super.viewDidLoad()
+        
+          // Do any additional setup after loading the view.
+        
     }
+ 
+    
+  
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 1
@@ -28,7 +33,7 @@ class ListNotesTableViewController: UIViewController {
         
     }
     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listNotesTableViewCell", for: indexPath) as! ListNotesTableViewCell
         cell.noteTitleLabel.text = "note's title"
@@ -37,14 +42,27 @@ class ListNotesTableViewController: UIViewController {
         return cell
     }
    
-    /*
+   
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
         // Get the new view controller using segue.destination.
+        // 1
+        guard let identifier = segue.identifier else { return }
+
         // Pass the selected object to the new view controller.
+        
+        
+        // 2
+        if identifier == "displayNote"
+        {
+            print("Transitioning to the Display Note View Controller")
+        }
+        
     }
-    */
+    
 
 }

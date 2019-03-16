@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
-import CoreData
+//import CoreData
 
 class FirebaseViewController: UIViewController {
     

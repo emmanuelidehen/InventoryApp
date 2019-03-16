@@ -2,27 +2,33 @@
 //  ListNotesTableViewCell.swift
 //  onbaording
 //
-//  Created by Emmanuel Idehen on 5/23/18.
-//  Copyright © Emmanuel idehen. All rights reserved.
+//  Created by Emmanuel Idehen on 3/15/19.
+//  Copyright © 2019 Marquavious Draggon. All rights reserved.
 //
 
-import Foundation
 import UIKit
-//  class ListNotesTableViewCell: UITableViewCell {
 
+class ListNotesTableViewCell: UITableViewCell
+{
 
-//
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // 1
-//        return 10
-//    }
-//
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        // 2
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "listNotesTableViewCell", for: indexPath)
-//        cell.textLabel?.text = "Cell Row: \(indexPath.row) Section: \(indexPath.section)"
-//
-//        return cell
-//    }
+   
+    
+    @IBOutlet weak var noteTitleLabel: UILabel!
+    
+    @IBOutlet weak var noteModificationTimeLabel: UILabel!
+    
+    
+    
+    override func awakeFromNib()
+    {
+        super.awakeFromNib()
+        // Initialization code
+    }
 
-//}
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+}
