@@ -36,8 +36,8 @@ class ListNotesTableViewController: UIViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listNotesTableViewCell", for: indexPath) as! ListNotesTableViewCell
-        cell.noteTitleLabel.text = "note's title"
-        cell.noteModificationTimeLabel.text = "note's modification time"
+      cell.noteTitleLabel.text = "note's title"
+       cell.noteModificationTimeLabel.text = "note's modification time"
         
         return cell
     }
@@ -54,14 +54,14 @@ class ListNotesTableViewController: UIViewController {
         guard let identifier = segue.identifier else { return }
 
         // Pass the selected object to the new view controller.
-        
-        
+
+
         // 2
         if identifier == "displayNote"
         {
             print("Transitioning to the Display Note View Controller")
         }
-        
+
     }
     
 

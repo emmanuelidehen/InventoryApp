@@ -3,7 +3,7 @@
 //  onbaording
 //
 //  Created by Emmanuel Idehen on 3/15/19.
-//  Copyright © 2019 Marquavious Draggon. All rights reserved.
+//  Copyright © 2019 Emmanuel Idehen. All rights reserved.
 //
 
 import UIKit
@@ -12,9 +12,9 @@ class ListNotesTableViewCell: UITableViewCell
 {
 
    
-    
     @IBOutlet weak var noteTitleLabel: UILabel!
     
+   
     @IBOutlet weak var noteModificationTimeLabel: UILabel!
     
     

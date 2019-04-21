@@ -13,9 +13,10 @@
     class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var window: UIWindow?
+    
+        let itemStore = ItemStore()
         
-        
-        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
             FirebaseApp.configure()
             return true
         }
@@ -56,7 +57,7 @@
                 if let error = error as NSError? {
                     // Replace this implementation with code to handle the error appropriately.
                     // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                    
+
                     /*
                      Typical reasons for an error here include:
                      * The parent directory does not exist, cannot be created, or disallows writing.
@@ -71,6 +72,18 @@
             return container
         }()
         
+//        lazy var persistentContainer: NSPersistentContainer = {
+//
+//            let container = NSPersistentContainer(name: "onbaording")
+//            container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+//                if let error = error {
+//
+//                    fatalError("Unresolved error, \((error as NSError).userInfo)")
+//                }
+//            })
+//            return container
+//        }()
+       // let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         // MARK: - Core Data Saving support
         
         func saveContext () {

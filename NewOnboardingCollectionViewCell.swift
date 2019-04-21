@@ -2,8 +2,8 @@
 //  NewOnboardingCollectionViewCell.swift
 //  onbaording
 //
-//  Created by Marquavious on 7/10/17.
-//  Copyright © 2017 Marquavious Draggon. All rights reserved.
+//  Created by Emmanuel on 7/10/17.
+//  Copyright © 2017 Emmanuel Idehen. All rights reserved.
 //
 
 import UIKit
